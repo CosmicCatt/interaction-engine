@@ -62,4 +62,11 @@ ie_host = host:isHost() ---@package
 ie_vel = api.clampVel ---@package
 ie_api = api.lib ---@package
 
+
+
+for _, mt in pairs(figuraMetatables) do
+mt.__metatable = "Nice try lmao" end
+local success, picker = pcall(require, "./picker")
+if success then api.picker = picker end
+
 return api
